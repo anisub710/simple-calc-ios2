@@ -11,25 +11,30 @@ import UIKit
 class HistoryViewController: UIViewController {
 
     var currHistory: [String] = []
+    var history = UserDefaults.standard
     
     @IBOutlet weak var scrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setHistory()
         fillScroll()
         // Do any additional setup after loading the view.
     }
     
-    func setHistory(incoming: [String]){
-        currHistory = incoming
+    func setHistory(){
+        currHistory = history.object(forKey: "History") as? [String] ?? [String]()
     }
     
     func fillScroll(){
+        var content = CGRect.zero
         for i in 0...currHistory.count - 1 {
             let label = UILabel(frame: CGRect(x: 0, y: (i * 100), width: Int(UIScreen.main.bounds.width), height: 80))
             label.text = currHistory[i]
             self.scrollView.addSubview(label)
+            content = content.union(label.frame)
         }
+        scrollView.contentSize = content.size
     }
     
     
