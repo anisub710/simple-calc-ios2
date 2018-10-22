@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     //result text field
     @IBOutlet weak var display: UITextField!
     var operations = ["/", "*", "-", "+", "%", "count", "avg", "fact"]
+    var history:[String] = []
     
     //gets input and handles separation of operation, forming decimals
     @IBAction func input(_ sender: UIButton!) {
@@ -68,6 +69,8 @@ class ViewController: UIViewController {
             }
         }
         display.text = String(result)
+        let historyText = trackOp.text! + " = \(String(result))"
+        history.append(historyText)
         calculation.removeAll()
     }
     
@@ -99,6 +102,11 @@ class ViewController: UIViewController {
             result = 0
         }
         return result
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as! HistoryViewController
+        destination.setHistory(incoming: history)
     }
 }
 

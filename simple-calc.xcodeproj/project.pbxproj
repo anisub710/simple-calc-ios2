@@ -12,6 +12,7 @@
 		AD3C34832176E94F007F4307 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD3C34812176E94F007F4307 /* Main.storyboard */; };
 		AD3C34852176E951007F4307 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD3C34842176E951007F4307 /* Assets.xcassets */; };
 		AD3C34882176E951007F4307 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD3C34862176E951007F4307 /* LaunchScreen.storyboard */; };
+		ADC9CA16217C1EBA0087551A /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC9CA15217C1EBA0087551A /* HistoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		AD3C34842176E951007F4307 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD3C34872176E951007F4307 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD3C34892176E951007F4307 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADC9CA15217C1EBA0087551A /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				AD3C34842176E951007F4307 /* Assets.xcassets */,
 				AD3C34862176E951007F4307 /* LaunchScreen.storyboard */,
 				AD3C34892176E951007F4307 /* Info.plist */,
+				ADC9CA15217C1EBA0087551A /* HistoryViewController.swift */,
 			);
 			path = "simple-calc";
 			sourceTree = "<group>";
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADC9CA16217C1EBA0087551A /* HistoryViewController.swift in Sources */,
 				AD3C34802176E94F007F4307 /* ViewController.swift in Sources */,
 				AD3C347E2176E94F007F4307 /* AppDelegate.swift in Sources */,
 			);
@@ -292,7 +296,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.uw.ischool.simple-calc1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -310,7 +314,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.uw.ischool.simple-calc1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
